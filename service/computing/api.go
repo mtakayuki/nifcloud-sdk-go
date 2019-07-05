@@ -41345,6 +41345,8 @@ type VolumeSetItem struct {
 
 	CreateTime *time.Time `locationName:"createTime" type:"timestamp" timestampFormat:""`
 
+	Description *string `locationName:"description" type:"string"`
+
 	DiskType *string `locationName:"diskType" type:"string"`
 
 	NextMonthAccountingType *string `locationName:"nextMonthAccountingType" type:"string"`
@@ -41401,6 +41403,12 @@ func (s *VolumeSetItem) SetCharge(v int64) *VolumeSetItem {
 // SetCreateTime sets the CreateTime field's value.
 func (s *VolumeSetItem) SetCreateTime(v time.Time) *VolumeSetItem {
 	s.CreateTime = &v
+	return s
+}
+
+// SetDescription sets the Description field's value.
+func (s *VolumeSetItem) SetDescription(v string) *VolumeSetItem {
+	s.Description = &v
 	return s
 }
 
